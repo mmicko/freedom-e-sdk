@@ -90,6 +90,9 @@ RISCV_CXXFLAGS += -ffunction-sections -fdata-sections
 # Include the Metal headers
 RISCV_CFLAGS   += -I$(abspath $(BSP_DIR)/install/include/)
 RISCV_CXXFLAGS += -I$(abspath $(BSP_DIR)/install/include/)
+# Use newlib-nano
+RISCV_CFLAGS   += --specs=nano.specs
+RISCV_CXXFLAGS += --specs=nano.specs
 
 # Turn on garbage collection for unused sections
 RISCV_LDFLAGS += -Wl,--gc-sections
